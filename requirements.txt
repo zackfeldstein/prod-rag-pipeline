@@ -1,0 +1,68 @@
+# Core RAG Dependencies
+langchain==0.1.0
+langchain-community==0.0.13
+langchain-openai==0.0.5
+langchain-milvus==0.0.1
+
+# Vector Database
+pymilvus==2.3.4
+
+# LLM & Embeddings
+openai==1.6.1
+sentence-transformers==2.2.2
+torch==2.1.2
+transformers==4.36.2
+accelerate==0.25.0
+
+# API Framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.1
+python-multipart==0.0.6
+
+# Document Processing
+unstructured[local-inference]==0.11.8
+pypdf==3.17.4
+python-docx==1.1.0
+openpyxl==3.1.2
+markdown==3.5.1
+
+# Data Processing
+pandas==2.1.4
+numpy==1.24.3
+tiktoken==0.5.2
+
+# Caching & Storage
+redis==5.0.1
+boto3==1.34.1
+minio==7.2.0
+
+# Monitoring & Logging
+prometheus-client==0.19.0
+structlog==23.2.0
+rich==13.7.0
+
+# HTTP & Async
+httpx==0.25.2
+aiofiles==23.2.1
+asyncio-mqtt==0.16.1
+
+# Configuration
+python-dotenv==1.0.0
+pyyaml==6.0.1
+click==8.1.7
+
+# Development & Testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+
+# Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+
+# Background Tasks
+celery==5.3.4
+flower==2.0.1

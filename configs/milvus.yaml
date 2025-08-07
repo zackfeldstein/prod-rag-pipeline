@@ -1,0 +1,81 @@
+# Milvus configuration file
+
+etcd:
+  endpoints:
+    - etcd:2379
+
+minio:
+  address: minio:9000
+  port: 9000
+  accessKeyID: minioadmin
+  secretAccessKey: minioadmin
+  useSSL: false
+  bucketName: "milvus-bucket"
+
+common:
+  defaultPartition: "_default"
+  defaultIndexName: "_default_idx"
+  retentionDuration: 432000 # seconds, 5 days
+  entityExpiration: -1 # Entity expiration time in seconds, -1 means never expire
+
+storage:
+  path: /var/lib/milvus
+  
+log:
+  level: info
+  file:
+    rootPath: /var/lib/milvus/logs
+  format: text
+
+grpc:
+  serverMaxRecvSize: 268435456 # 256MB
+  serverMaxSendSize: 268435456 # 256MB
+  clientMaxRecvSize: 268435456 # 256MB
+  clientMaxSendSize: 268435456 # 256MB
+
+# Query node configuration
+queryNode:
+  cacheSize: 32 # GB, cache size for query node
+  
+# Index node configuration  
+indexNode:
+  scheduler:
+    buildParallel: 1
+    
+# Data node configuration
+dataNode:
+  flush:
+    insertBufSize: 16777216 # Bytes, 16MB
+    
+# Root coordinator configuration
+rootCoord:
+  dmlChannelNum: 256
+  maxPartitionNum: 4096
+  minSegmentSizeToEnableIndex: 1024
+  
+# Query coordinator configuration
+queryCoord:
+  taskMergeInterval: 1 # seconds
+  taskExecutionCap: 256
+
+# Data coordinator configuration  
+dataCoord:
+  segment:
+    maxSize: 1024 # MB
+    sealProportion: 0.23
+  compaction:
+    enableAutoCompaction: true
+
+# Proxy configuration
+proxy:
+  timeTickInterval: 200 # ms
+  msgStream:
+    timeTick:
+      bufSize: 512
+
+# Message stream configuration
+msgStreamType: pulsar
+pulsar:
+  address: pulsar://pulsar:6650
+  port: 6650
+  maxMessageSize: 5242880 # 5MB
