@@ -1,0 +1,82 @@
+{
+  "data_sources_config": {
+    "s3": {
+      "source_name": "s3_documents",
+      "endpoint_url": "http://minio-datalake:9000",
+      "access_key": "admin",
+      "secret_key": "password123",
+      "bucket": "raw-data",
+      "prefix": "documents/",
+      "region": "us-east-1"
+    },
+    "database": {
+      "source_name": "postgres_content",
+      "type": "postgresql",
+      "host": "postgres",
+      "port": 5432,
+      "database": "prod_rag",
+      "username": "rag_user",
+      "password": "rag_password",
+      "tables": ["documents", "articles", "knowledge_base"],
+      "chunk_size": 5000
+    },
+    "api": {
+      "source_name": "content_api",
+      "base_url": "https://api.example.com",
+      "endpoints": ["articles", "documents", "news"],
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN",
+        "Content-Type": "application/json"
+      },
+      "page_size": 100,
+      "params": {
+        "format": "json",
+        "include_content": true
+      }
+    },
+    "mongodb": {
+      "source_name": "mongo_docs",
+      "host": "mongodb",
+      "port": 27017,
+      "database": "content_db",
+      "username": "mongo_user",
+      "password": "mongo_password",
+      "collections": ["articles", "documents", "posts"],
+      "filter": {
+        "status": "published",
+        "content_type": "article"
+      }
+    },
+    "filesystem": {
+      "source_name": "local_files",
+      "root_path": "/app/data/uploads",
+      "file_patterns": ["*.pdf", "*.docx", "*.txt", "*.md"]
+    }
+  },
+  "quality_checks_config": {
+    "min_content_length": 100,
+    "max_content_length": 1000000,
+    "required_fields": ["content", "title"],
+    "null_threshold_percent": 20,
+    "duplicate_threshold_percent": 5
+  },
+  "processing_config": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "batch_size": 1000,
+    "enable_deduplication": true,
+    "enable_content_filtering": true,
+    "language_detection": true
+  },
+  "streaming_config": {
+    "kafka_topics": {
+      "documents": "rag-documents",
+      "updates": "rag-document-updates",
+      "deletions": "rag-document-deletions",
+      "metadata": "rag-metadata-updates"
+    },
+    "consumer_group": "rag-document-processor",
+    "batch_size": 100,
+    "max_poll_records": 500
+  }
+}

@@ -2,16 +2,33 @@
 
 A production-ready Retrieval Augmented Generation (RAG) pipeline built with the most popular and battle-tested open-source tools.
 
-## 🏗️ Architecture
+## 🏗️ Complete Data Architecture
 
+### **Core RAG Stack**
 - **LangChain**: RAG orchestration and document processing
 - **Milvus**: Scalable vector database for semantic search
 - **FastAPI**: High-performance API framework with automatic docs
-- **Redis**: Caching and session management
-- **PostgreSQL**: Metadata and user management
 - **Sentence Transformers**: State-of-the-art embedding models
-- **Prometheus + Grafana**: Comprehensive monitoring and dashboards
-- **Docker**: Containerized deployment for easy scaling
+
+### **Data Lake & ETL Pipeline**
+- **MinIO**: S3-compatible data lake storage (Raw, Processed, Curated zones)
+- **Apache Airflow**: ETL orchestration and workflow management
+- **Apache Kafka**: Real-time streaming data ingestion
+- **Apache Spark**: Large-scale data processing
+
+### **Data Connectors**
+- **S3/MinIO**: Object storage integration
+- **PostgreSQL/MySQL**: Relational database connectors
+- **MongoDB**: NoSQL database connector
+- **REST APIs**: HTTP API data sources
+- **File System**: Local file ingestion
+
+### **Monitoring & Governance**
+- **Prometheus + Grafana**: Metrics and dashboards
+- **MLflow**: Model tracking and versioning
+- **Great Expectations**: Data quality validation
+- **Jaeger**: Distributed tracing
+- **Redis**: Caching and session management
 
 ## 🚀 Quick Start
 
@@ -22,24 +39,28 @@ A production-ready Retrieval Augmented Generation (RAG) pipeline built with the 
 - 8GB+ RAM recommended
 - GPU support optional (for faster embeddings)
 
-### 1. Start Infrastructure Services
+### 1. Choose Your Deployment Mode
 
+#### **Option A: RAG-Only Pipeline (Simplified)**
 ```bash
-# Clone and navigate to the project
-git clone <repository>
-cd prod-rag
-
-# Start all infrastructure services
+# Start basic RAG infrastructure
 ./scripts/start_services.sh
 ```
 
+#### **Option B: Complete Data Lake Pipeline (Recommended)**
+```bash
+# Start full data lake and RAG pipeline
+./scripts/start_datalake.sh
+```
+
 This will start:
-- Milvus vector database
-- Redis for caching
-- PostgreSQL for metadata
-- Prometheus for metrics
-- Grafana for dashboards
-- Jaeger for tracing
+- **Data Lake**: MinIO with Raw/Processed/Curated zones
+- **ETL Pipeline**: Apache Airflow for data orchestration
+- **Streaming**: Apache Kafka for real-time ingestion
+- **Processing**: Apache Spark for large-scale data processing
+- **RAG Stack**: Milvus, Redis, PostgreSQL
+- **Monitoring**: Prometheus, Grafana, Jaeger, MLflow
+- **Development**: Jupyter notebooks for data exploration
 
 ### 2. Install Python Dependencies
 
