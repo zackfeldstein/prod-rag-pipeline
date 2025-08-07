@@ -91,6 +91,50 @@ python -m uvicorn src.prod_rag.api.main:app --host 0.0.0.0 --port 8000 --reload
 - **Minio Console**: http://localhost:9001 (minioadmin:minioadmin)
 - **Jaeger Tracing**: http://localhost:16686
 
+## 📚 Complete Tutorial Series
+
+🎯 **NEW!** We've created comprehensive tutorials that walk you through the entire process from raw data to a working chat interface:
+
+### 🚀 Quick Start
+```bash
+# Interactive quick start guide
+./tutorials/quick-start.sh
+```
+
+### 📖 Tutorial Series
+1. **[Complete Data-to-Chat Guide](tutorials/getting-started/data-to-chat-complete-guide.md)** ⭐ *Start here!*
+   - Upload demo data to the data lake
+   - Run ETL pipelines with Airflow
+   - Ingest into Milvus vector database
+   - Chat with your data via API
+   - Complete 30-minute walkthrough
+
+2. **[Data Lake Setup](tutorials/getting-started/data-lake-setup.md)**
+   - 3-zone architecture (Raw/Processed/Curated)
+   - Data connectors for multiple sources
+   - Quality validation and monitoring
+
+3. **[Real-time Streaming](tutorials/getting-started/streaming-setup.md)**
+   - Kafka-based streaming ingestion
+   - Live document updates
+   - Stream processing patterns
+
+### 🎯 Demo Data Included
+The tutorials include realistic demo datasets:
+- 📰 **News Articles**: Technology, science, business news
+- 📦 **Product Catalogs**: E-commerce product information  
+- 📚 **API Documentation**: Technical documentation examples
+- 💬 **Customer Data**: Support tickets and reviews
+- 🔬 **Research Papers**: Scientific abstracts
+
+```bash
+# Generate demo data
+python tutorials/demo-data/create_demo_data.py
+
+# Test streaming pipeline
+python tutorials/demo-data/test_streaming.py
+```
+
 ## 📖 Usage
 
 ### Document Ingestion
@@ -270,13 +314,20 @@ prod-rag/
 │   ├── api/                # FastAPI endpoints
 │   ├── core/               # Core RAG engine
 │   ├── data/               # Document ingestion
+│   ├── data_lake/          # Data lake management
+│   ├── streaming/          # Kafka streaming
 │   ├── models/             # Pydantic schemas
 │   └── utils/              # Utilities
+├── tutorials/              # Complete tutorial series
+│   ├── getting-started/    # Beginner tutorials
+│   ├── advanced/           # Advanced topics
+│   └── demo-data/          # Sample data and scripts
 ├── configs/                # Configuration files
 ├── scripts/                # Deployment scripts
+├── dags/                   # Airflow DAGs
 ├── tests/                  # Test suite
 ├── docker-compose.yml      # Development environment
-├── docker-compose.prod.yml # Production environment
+├── docker-compose.datalake.yml # Complete data lake
 └── requirements.txt        # Python dependencies
 ```
 

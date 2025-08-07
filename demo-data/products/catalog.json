@@ -1,0 +1,80 @@
+[
+  {
+    "product_id": "TECH001",
+    "name": "SmartWatch Pro Max",
+    "category": "Wearable Technology",
+    "price": 599.99,
+    "description": "Premium smartwatch with advanced health monitoring, GPS tracking, and 7-day battery life. Features ECG, blood oxygen monitoring, and sleep analysis.",
+    "features": "ECG monitoring,Blood oxygen sensor,GPS + Cellular,7-day battery,Waterproof to 50m,Always-on display,Health alerts",
+    "brand": "TechCorp",
+    "rating": 4.8,
+    "reviews_count": 2847,
+    "in_stock": true,
+    "stock_quantity": 156
+  },
+  {
+    "product_id": "ELEC002",
+    "name": "Wireless Noise-Canceling Headphones",
+    "category": "Audio",
+    "price": 349.99,
+    "description": "Industry-leading noise cancellation with premium sound quality. 40-hour battery life and quick charge capability.",
+    "features": "Active noise cancellation,40-hour battery,Quick charge (10min = 5hrs),Premium drivers,Touch controls,Voice assistant",
+    "brand": "AudioTech",
+    "rating": 4.7,
+    "reviews_count": 1923,
+    "in_stock": true,
+    "stock_quantity": 89
+  },
+  {
+    "product_id": "HOME003",
+    "name": "Smart Home Security System",
+    "category": "Home Security",
+    "price": 799.99,
+    "description": "Complete home security system with AI-powered monitoring, facial recognition, and mobile alerts. Includes 4 cameras and central hub.",
+    "features": "AI facial recognition,Mobile alerts,Night vision,2-way audio,Cloud storage,Professional monitoring",
+    "brand": "SecureHome",
+    "rating": 4.6,
+    "reviews_count": 856,
+    "in_stock": true,
+    "stock_quantity": 43
+  },
+  {
+    "product_id": "FIT004",
+    "name": "AI Personal Trainer Mirror",
+    "category": "Fitness",
+    "price": 1499.99,
+    "description": "Interactive fitness mirror with AI personal trainer. Real-time form correction, personalized workouts, and progress tracking.",
+    "features": "AI form correction,Personalized workouts,Progress tracking,Live classes,Heart rate monitoring,Space-saving design",
+    "brand": "FitTech",
+    "rating": 4.9,
+    "reviews_count": 412,
+    "in_stock": true,
+    "stock_quantity": 27
+  },
+  {
+    "product_id": "AUTO005",
+    "name": "Smart Car Dash Camera",
+    "category": "Automotive",
+    "price": 299.99,
+    "description": "AI-powered dash camera with collision detection, lane departure warnings, and automatic emergency recording.",
+    "features": "Collision detection,Lane departure warning,Emergency recording,Night vision,GPS tracking,Mobile app",
+    "brand": "DriveSecure",
+    "rating": 4.5,
+    "reviews_count": 1156,
+    "in_stock": true,
+    "stock_quantity": 78
+  },
+  {
+    "product_id": "COMP006",
+    "name": "AI Development Laptop",
+    "category": "Computers",
+    "price": 3299.99,
+    "description": "High-performance laptop optimized for AI development and machine learning. Features dedicated AI chip and advanced cooling.",
+    "features": "AI acceleration chip,32GB RAM,1TB NVMe SSD,RTX 4080 GPU,Advanced cooling,17-inch 4K display",
+    "brand": "DevMachine",
+    "rating": 4.8,
+    "reviews_count": 324,
+    "in_stock": true,
+    "stock_quantity": 15
+  }
+]

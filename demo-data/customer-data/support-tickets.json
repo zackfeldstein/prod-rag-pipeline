@@ -1,0 +1,35 @@
+[
+  {
+    "ticket_id": "TICK-2024-001",
+    "customer_id": "CUST-7891",
+    "subject": "Issues with SmartWatch battery drain",
+    "description": "My SmartWatch Pro Max battery is draining much faster than advertised. It's only lasting 2 days instead of 7 days. I've tried restarting and updating firmware but the issue persists.",
+    "category": "Technical Support",
+    "priority": "Medium",
+    "status": "Open",
+    "created_date": "2024-01-15",
+    "customer_sentiment": "Frustrated"
+  },
+  {
+    "ticket_id": "TICK-2024-002",
+    "customer_id": "CUST-4567",
+    "subject": "Love the new AI features!",
+    "description": "Just wanted to say how amazing the new AI personal trainer features are on the fitness mirror. The form corrections are spot-on and I've already seen improvement in my workouts. Keep up the great work!",
+    "category": "Feedback",
+    "priority": "Low",
+    "status": "Closed",
+    "created_date": "2024-01-14",
+    "customer_sentiment": "Very Positive"
+  },
+  {
+    "ticket_id": "TICK-2024-003",
+    "customer_id": "CUST-9234",
+    "subject": "Billing discrepancy on latest invoice",
+    "description": "I noticed an extra charge of $99.99 on my latest invoice that I don't recognize. Could you please help me understand what this charge is for? My usual monthly subscription is $29.99.",
+    "category": "Billing",
+    "priority": "High",
+    "status": "In Progress",
+    "created_date": "2024-01-13",
+    "customer_sentiment": "Concerned"
+  }
+]

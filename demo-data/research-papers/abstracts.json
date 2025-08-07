@@ -1,0 +1,40 @@
+[
+  {
+    "paper_id": "PAPER-2024-001",
+    "title": "Advances in Quantum Error Correction for Fault-Tolerant Computing",
+    "authors": [
+      "Dr. Sarah Chen",
+      "Dr. Michael Rodriguez",
+      "Prof. Lisa Park"
+    ],
+    "abstract": "We present novel approaches to quantum error correction that significantly improve the threshold for fault-tolerant quantum computation. Our surface code implementation achieves 99.99% fidelity with reduced overhead, bringing practical quantum computing closer to reality. The method combines machine learning-optimized decoding with adaptive threshold adjustment, resulting in 40% fewer physical qubits required per logical qubit compared to previous implementations.",
+    "keywords": [
+      "quantum computing",
+      "error correction",
+      "fault tolerance",
+      "surface codes"
+    ],
+    "publication_date": "2024-01-15",
+    "journal": "Nature Quantum Information",
+    "doi": "10.1038/s41534-024-0001-x"
+  },
+  {
+    "paper_id": "PAPER-2024-002",
+    "title": "Large Language Models for Scientific Literature Review and Hypothesis Generation",
+    "authors": [
+      "Dr. Jennifer Walsh",
+      "Dr. David Kim",
+      "Dr. Maria Santos"
+    ],
+    "abstract": "This study demonstrates the application of large language models (LLMs) for automated scientific literature review and novel hypothesis generation. Our fine-tuned model processes 10,000+ research papers to identify research gaps and propose testable hypotheses. Validation against expert-generated hypotheses shows 85% agreement on novelty and 78% on feasibility. The system accelerates the research discovery process by 5x while maintaining scientific rigor.",
+    "keywords": [
+      "artificial intelligence",
+      "scientific discovery",
+      "literature review",
+      "hypothesis generation"
+    ],
+    "publication_date": "2024-01-12",
+    "journal": "Science Advances",
+    "doi": "10.1126/sciadv.2024.0001"
+  }
+]

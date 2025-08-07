@@ -1,0 +1,24 @@
+[
+  {
+    "review_id": "REV-2024-001",
+    "product_id": "TECH001",
+    "customer_id": "CUST-1111",
+    "rating": 5,
+    "title": "Exceeded expectations!",
+    "review_text": "This smartwatch has completely changed how I track my fitness and health. The ECG feature caught an irregular heartbeat that I wasn't aware of, and the 7-day battery life is actually accurate! The sleep tracking is incredibly detailed and has helped me improve my sleep quality. Highly recommended!",
+    "verified_purchase": true,
+    "review_date": "2024-01-10",
+    "helpful_votes": 23
+  },
+  {
+    "review_id": "REV-2024-002",
+    "product_id": "ELEC002",
+    "customer_id": "CUST-2222",
+    "rating": 4,
+    "title": "Great sound quality, minor connectivity issues",
+    "review_text": "The noise cancellation on these headphones is fantastic - I can barely hear my noisy office environment. Sound quality is excellent for music and calls. However, I've had occasional Bluetooth connectivity issues with my laptop. Overall very satisfied with the purchase.",
+    "verified_purchase": true,
+    "review_date": "2024-01-08",
+    "helpful_votes": 15
+  }
+]
